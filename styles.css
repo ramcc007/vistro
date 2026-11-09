@@ -284,3 +284,55 @@ h1.plain { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.05; letter-spac
 .card h2 { margin-top: 0; }
 .mail { font-size: 1.4rem; font-weight: 700; word-break: break-all; }
 .muted { color: var(--muted) !important; margin-bottom: 0 !important; }
+
+/* ---------- Mobile and touch ---------- */
+html { -webkit-tap-highlight-color: transparent; }
+.nav { top: calc(10px + env(safe-area-inset-top, 0px)); }
+.wrap { padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.foot { padding-bottom: calc(36px + env(safe-area-inset-bottom, 0px)); }
+
+/* Phones and small tablets */
+@media (max-width: 760px) {
+  .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .nav { width: calc(100% - 20px); padding-left: 12px; }
+  .navlink { padding: 0 10px; }
+  .pill { padding: 0 16px; }
+  .hero { padding: calc(96px + env(safe-area-inset-top, 0px)) 0 84px; align-items: flex-end; }
+  h1 { font-size: clamp(2.8rem, 14vw, 4.4rem); margin-bottom: 18px; }
+  .lead { margin-bottom: 26px; }
+  .cta { flex-direction: column; align-items: stretch; }
+  .cta .btn, .cta .ghost, .links .btn, .links .ghost { justify-content: center; width: 100%; min-height: 52px; }
+  .links { flex-direction: column; }
+  .apps { padding: 84px 0 80px; }
+  h2 { margin-bottom: 36px; }
+  .feature-in { padding: 22px 18px 28px; gap: 28px; }
+  .phone { width: min(78%, 250px); }
+  .soon { flex-direction: row; gap: 18px; padding: 22px 18px; }
+  .orbit { width: 60px; height: 60px; }
+  .orbit::before { inset: 22px; }
+  .foot-grid { flex-direction: column; gap: 24px; }
+  .foot ul { grid-template-columns: 1fr 1fr; column-gap: 16px; }
+  .legal { padding-top: calc(104px + env(safe-area-inset-top, 0px)); padding-bottom: 56px; }
+  .card { padding: 20px; }
+  .mail { font-size: 1.15rem; }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .brand span { display: none; }
+  .navlink { padding: 0 8px; }
+}
+
+/* Short screens (landscape phones): no scroll cue, tighter hero */
+@media (max-height: 560px) {
+  .cue { display: none; }
+  .hero { min-height: 0; padding-top: 88px; padding-bottom: 48px; align-items: center; }
+  h1 { font-size: clamp(2.4rem, 8vw, 3.8rem); }
+}
+
+/* Touch devices: no hover lifts, no constantly repainting border (saves battery) */
+@media (hover: none) {
+  .btn:hover, .ghost:hover { transform: none; }
+  .feature { animation: none; --a: 135deg; }
+  .grad { animation: none; background-position: 0 0; }
+}
