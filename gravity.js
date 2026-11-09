@@ -113,17 +113,19 @@
   var uC = gl.getUniformLocation(prog, "uC");
   var uT = gl.getUniformLocation(prog, "uT");
 
-  var scale = 1, aspect = 1;
+  // Phones start a little below full resolution: fewer pixels, cooler device, same look.
+  var phone = window.matchMedia("(max-width: 760px), (pointer: coarse)").matches;
+  var scale = phone ? 0.85 : 1, aspect = 1;
   var cur = { x: 0, y: 0 }, tgt = { x: 0, y: 0 };
   var lastMove = -1e9;
 
   function home() {
-    // Wide screens: lens sits right of the headline. Tall screens: lower middle.
-    return aspect > 1 ? { x: aspect * 0.2, y: 0.0 } : { x: 0, y: -0.16 };
+    // Wide screens: lens sits right of the headline. Tall screens: upper middle, above the text.
+    return aspect > 1 ? { x: aspect * 0.2, y: 0.0 } : { x: 0, y: 0.17 };
   }
 
   function resize() {
-    var dpr = Math.min(window.devicePixelRatio || 1, 1.5) * scale;
+    var dpr = Math.min(window.devicePixelRatio || 1, phone ? 1.25 : 1.5) * scale;
     var w = Math.max(2, Math.round(window.innerWidth * dpr));
     var h = Math.max(2, Math.round(window.innerHeight * dpr));
     if (cv.width !== w || cv.height !== h) {
