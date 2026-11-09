@@ -10,3 +10,7 @@
 ## Site
 
 - [Vistro home](https://vistro.dev/): The full list of apps.
+- [Privacy Policy](https://vistro.dev/privacy)
+- [Terms of Use](https://vistro.dev/terms)
+- [Disclaimer](https://vistro.dev/disclaimer)
+- [Contact](https://vistro.dev/contact): support@vistro.dev
