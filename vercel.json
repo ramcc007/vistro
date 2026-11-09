@@ -11,7 +11,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.(js|css|svg|png)",
+      "source": "/(.*)\\.(js|css|svg|png|ico|webmanifest)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=31536000, stale-while-revalidate=86400" }
       ]

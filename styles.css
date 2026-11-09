@@ -90,7 +90,7 @@ a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-ra
 }
 
 h1 {
-  margin: 0 0 24px; font-size: clamp(3.1rem, 10vw, 8rem); line-height: 0.93; letter-spacing: -0.055em; font-weight: 800;
+  margin: 0 0 24px; font-size: clamp(3rem, 9.5vw, 6.8rem); line-height: 0.95; letter-spacing: -0.055em; font-weight: 800;
   background: linear-gradient(100deg, #ffffff 15%, #c3ccff 70%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
