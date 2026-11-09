@@ -90,7 +90,7 @@ a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-ra
 }
 
 h1 {
-  margin: 0 0 24px; font-size: clamp(3.1rem, 10vw, 8rem); line-height: 0.93; letter-spacing: -0.055em; font-weight: 800;
+  margin: 0 0 24px; font-size: clamp(3rem, 9.5vw, 6.8rem); line-height: 0.95; letter-spacing: -0.055em; font-weight: 800;
   background: linear-gradient(100deg, #ffffff 15%, #c3ccff 70%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
@@ -258,3 +258,29 @@ h3 { margin: 0 0 6px; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; let
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .phone { transform: none; }
 }
+
+/* Footer */
+.foot { padding: 48px 0 36px; }
+.foot-grid { display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; margin-bottom: 28px; }
+.foot-brand { margin: 0 0 6px; font-weight: 800; font-size: 1.2rem; color: var(--fg); letter-spacing: -0.02em; }
+.foot-note { margin: 0; max-width: 26em; color: var(--muted); }
+.foot-h { margin: 0 0 10px; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--fg); }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.foot li a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--muted); }
+.foot li a:hover { color: var(--fg); }
+.copy-line { padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.85rem; }
+
+/* Legal pages */
+.subpage { background: linear-gradient(180deg, #05060d, #0a0820 60%, #05060d); min-height: 100vh; display: flex; flex-direction: column; }
+.legal { flex: 1; padding: 130px 0 80px; }
+.narrow { max-width: 760px; }
+h1.plain { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.05; letter-spacing: -0.045em; margin: 0 0 8px; background: none; color: var(--fg); -webkit-text-fill-color: currentColor; }
+.updated { margin: 0 0 36px; color: var(--muted); font-size: 0.9rem; }
+.legal h2 { margin: 36px 0 8px; font-size: 1.25rem; letter-spacing: -0.02em; }
+.legal p { margin: 0 0 14px; color: #c7cbe6; }
+.legal a { color: var(--cyan); text-underline-offset: 3px; }
+.legal strong { color: var(--fg); }
+.card { margin: 24px 0 32px; padding: 24px 28px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,0.03); }
+.card h2 { margin-top: 0; }
+.mail { font-size: 1.4rem; font-weight: 700; word-break: break-all; }
+.muted { color: var(--muted) !important; margin-bottom: 0 !important; }

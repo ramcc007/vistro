@@ -1,0 +1,16 @@
+# Vistro
+
+> Vistro builds focused iPhone and iPad apps, each around one idea. Apps are free to download, with no ads and no accounts. This site lists the apps and links to download them.
+
+## Apps
+
+- [NumFall](https://numfall.store): A timed number puzzle for iPhone and iPad. Numbers fall under gravity; place each so every row, column and box holds each number once, before the clock runs out. Three boards: Quick 4x4, Classic 6x6, Master 9x9. Free, no ads.
+- [NumFall on the App Store](https://apps.apple.com/app/apple-store/id6820579220): Official download page.
+
+## Site
+
+- [Vistro home](https://vistro.dev/): The full list of apps.
+- [Privacy Policy](https://vistro.dev/privacy)
+- [Terms of Use](https://vistro.dev/terms)
+- [Disclaimer](https://vistro.dev/disclaimer)
+- [Contact](https://vistro.dev/contact): support@vistro.dev
