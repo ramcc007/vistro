@@ -2,98 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vistro | Apps and sites built to be useful</title>
-  <meta name="description" content="Vistro is home to NumFall, a timed number puzzle for iPhone and iPad, plus Scripwise, B2BRated and Clear Verdict: focused sites for stocks, software and shopping.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vistro | Small apps with a pull</title>
+  <meta name="description" content="Vistro makes focused apps. First up: NumFall, a timed number puzzle for iPhone and iPad. Free, no ads.">
   <link rel="canonical" href="https://vistro.dev/">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#05060d">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Vistro">
-  <meta property="og:title" content="Vistro | Apps and sites built to be useful">
-  <meta property="og:description" content="NumFall, Scripwise, B2BRated and Clear Verdict: small, focused products from Vistro.">
+  <meta property="og:title" content="Vistro | Small apps with a pull">
+  <meta property="og:description" content="Focused apps built around one good idea. First up: NumFall, a timed number puzzle for iPhone and iPad.">
   <meta property="og:url" content="https://vistro.dev/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://vistro.dev/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Vistro",
-    "url": "https://vistro.dev/"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Vistro",
+        "url": "https://vistro.dev/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NumFall",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "iOS, iPadOS",
+        "description": "A timed number puzzle for iPhone and iPad. Drop numbers into columns to fill the grid before the clock runs out.",
+        "url": "https://numfall.store",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    ]
   }
   </script>
 </head>
 <body>
-  <a class="skip" href="#products">Skip to products</a>
+  <a class="skip" href="#apps">Skip to apps</a>
 
-  <header class="wrap top">
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <header class="nav" role="banner">
     <a class="brand" href="/" aria-label="Vistro home">
-      <svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
-        <rect width="32" height="32" rx="8" fill="currentColor"/>
+      <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="9" fill="currentColor"/>
         <path d="M8 10l8 13 8-13" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span>Vistro</span>
     </a>
+    <nav aria-label="Primary">
+      <a class="navlink" href="#apps">Apps</a>
+      <a class="pill" href="https://apps.apple.com/app/apple-store/id6820579220?pt=129582636&amp;mt=8&amp;ct=vistro" rel="noopener">Get NumFall</a>
+    </nav>
   </header>
 
   <main>
-    <section class="wrap hero">
-      <h1>Small products,<br>built to be useful.</h1>
-      <p class="lead">Vistro is home to a puzzle game, a stock research site and two comparison sites. Each one does a single job and does it clearly.</p>
+    <section id="hero" class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Vistro</p>
+        <h1>Small apps<br><span class="grad">with a pull.</span></h1>
+        <p class="lead">Focused apps, each built around one good idea. The first one has just landed.</p>
+        <p class="cta">
+          <a class="btn" href="https://apps.apple.com/app/apple-store/id6820579220?pt=129582636&amp;mt=8&amp;ct=vistro" rel="noopener">Get NumFall on the App Store</a>
+          <a class="ghost" href="#apps">See how it plays</a>
+        </p>
+      </div>
+      <a class="cue" href="#apps" aria-label="Scroll to apps"><span></span></a>
     </section>
 
-    <section id="products" class="wrap" aria-labelledby="products-title">
-      <h2 id="products-title" class="sr">Products</h2>
-      <ul class="grid">
-        <li class="card">
-          <p class="kind">App for iPhone and iPad</p>
-          <h3>NumFall</h3>
-          <p class="tag">Drop the numbers. Beat the clock.</p>
-          <p>A timed number puzzle where you drop numbers into columns to fill the grid before the clock runs out. Free, with no ads.</p>
-          <p class="links">
-            <a class="btn" href="https://apps.apple.com/app/apple-store/id6820579220?pt=129582636&amp;mt=8&amp;ct=vistro" rel="noopener">Get it on the App Store</a>
-            <a class="ghost" href="https://numfall.store" rel="noopener">numfall.store</a>
-          </p>
-        </li>
+    <section id="apps" class="apps">
+      <div class="wrap">
+        <p class="eyebrow">Apps</p>
+        <h2>Built one at a time.</h2>
 
-        <li class="card">
-          <p class="kind">Website</p>
-          <h3>Scripwise</h3>
-          <p class="tag">Indian equities, scored on the fundamentals.</p>
-          <p>Screen thousands of NSE and BSE listed companies by valuation, growth and profitability, each with a score built from its financial data.</p>
-          <p class="links">
-            <a class="btn" href="https://scripwise.co.in" rel="noopener">Visit scripwise.co.in</a>
-          </p>
-        </li>
+        <!--
+          To add an app: copy the <article class="feature"> block below,
+          change the text and links, and push. No build step, no database.
+        -->
+        <article class="feature" id="numfall">
+          <div class="feature-in">
+            <div class="stage">
+              <div class="phone" role="img" aria-label="Illustration of the NumFall board: numbers drop into the grid while a timer runs down.">
+                <div class="notch"></div>
+                <div class="screen">
+                  <div class="hud"><span>Quick 4&times;4</span><span class="time"><i></i></span></div>
+                  <div class="board">
+                    <span class="c">1</span><span class="c">2</span><span class="c slot s1"><span class="tile">3</span></span><span class="c">4</span>
+                    <span class="c">3</span><span class="c slot s2"><span class="tile">4</span></span><span class="c">1</span><span class="c">2</span>
+                    <span class="c">2</span><span class="c">1</span><span class="c">4</span><span class="c slot s3"><span class="tile">3</span></span>
+                    <span class="c slot s4"><span class="tile">4</span></span><span class="c">3</span><span class="c">2</span><span class="c">1</span>
+                  </div>
+                </div>
+              </div>
+              <p class="note">Illustration</p>
+            </div>
 
-        <li class="card">
-          <p class="kind">Website</p>
-          <h3>B2BRated</h3>
-          <p class="tag">Find the right software for your business.</p>
-          <p>Compare software plans, prices and features across hundreds of categories, with each price linked back to its vendor source.</p>
-          <p class="links">
-            <a class="btn" href="https://b2brated.com" rel="noopener">Visit b2brated.com</a>
-          </p>
-        </li>
+            <div class="copy">
+              <p class="kind">iPhone and iPad &middot; Free</p>
+              <h3>NumFall</h3>
+              <p class="tag">Drop the numbers. Beat the clock.</p>
+              <p>A timed number puzzle where numbers fall under gravity. Place each one so every row, column and box holds each number once, before the clock runs out.</p>
+              <ul class="feats">
+                <li><b>Always against the clock.</b> The timer is on for every level.</li>
+                <li><b>Three boards.</b> Quick 4&times;4, Classic 6&times;6 and Master 9&times;9.</li>
+                <li><b>No ads.</b> Free to download and play.</li>
+                <li><b>Made for iPhone and iPad.</b> Sharp at every size, smooth at 120 Hz.</li>
+              </ul>
+              <p class="links">
+                <a class="btn" href="https://apps.apple.com/app/apple-store/id6820579220?pt=129582636&amp;mt=8&amp;ct=vistro" rel="noopener">Download on the App Store</a>
+                <a class="ghost" href="https://numfall.store" rel="noopener">numfall.store</a>
+              </p>
+            </div>
+          </div>
+        </article>
 
-        <li class="card">
-          <p class="kind">Website</p>
-          <h3>Clear Verdict</h3>
-          <p class="tag">Pick the right product the first time.</p>
-          <p>Independent buying guides for shoppers in India, comparing products on manufacturer specifications and public documents.</p>
-          <p class="links">
-            <a class="btn" href="https://www.clearfolio.online" rel="noopener">Visit clearfolio.online</a>
-          </p>
-        </li>
-      </ul>
+        <article class="soon" aria-label="Next app">
+          <div class="orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div>
+            <h3>The next one is in the works.</h3>
+            <p>More apps are on the way. They will show up here.</p>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
-  <footer class="wrap foot">
-    <p>&copy; 2026 Vistro</p>
+  <footer class="foot">
+    <div class="wrap"><p>&copy; 2026 Vistro</p></div>
   </footer>
+
+  <script src="/gravity.js" defer></script>
+  <script src="/main.js" defer></script>
 </body>
 </html>
